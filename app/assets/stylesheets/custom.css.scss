@@ -1,6 +1,15 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.navbar{
+    overflow: hidden;
+    background-color: #333;
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+}
+
+
 .jumbotron {
     background-image: asset-url('bg.jpg');
     background-size: cover;
@@ -14,11 +23,12 @@
     text-transform : uppercase;
     font-size : 1.7em;
     letter-spacing : -1px;
-    color : black ;
+    color : white ;
+    font-weight : bold;
 }
 
 #logo:hover{
-    font-weight : bold;
+   color : #2de2ca;
 }
 
 .jumbotron h1,h2 {
