@@ -1,6 +1,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.description{
+    margin-top: 0;
+}
+.chef_info{
+    margin-top : 10px
+}
 .navbar{
     overflow: hidden;
     background-color: #333;
@@ -8,7 +14,14 @@
     top: 0; 
     width: 100%; 
 }
-
+.btn-xlarge{
+    background-color: #333;
+    color: white;
+}
+.well a{
+    color : black;
+     font-weight : bold;
+}
 
 .jumbotron {
     background-image: asset-url('bg.jpg');
