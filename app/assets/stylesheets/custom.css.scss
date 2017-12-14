@@ -1,6 +1,11 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
+.list-reipes{
+    margin-top :7px;
+}
+
 .description{
     margin-top: 0;
 }
@@ -10,7 +15,6 @@
 .navbar{
     overflow: hidden;
     background-color: #333;
-    position: fixed; 
     top: 0; 
     width: 100%; 
 }
