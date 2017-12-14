@@ -1,7 +1,7 @@
 class ChefsController < ApplicationController
   before_action :set_chef, only: [:show, :edit, :update, :destroy]
   def new
-    @chefs = Chef.new
+    @chef = Chef.new
   end
   def create
     @chef = Chef.new(chef_params)
