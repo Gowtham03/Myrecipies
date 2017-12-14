@@ -9,21 +9,53 @@
         <span class="icon-bar"></span>
       </button>
       <%= link_to "MyRecipes" , root_path,class: "navbar-brand", id: "logo" %>
+      <%= link_to "Chefs", chefs_path,class: "btn btn-danger list-reipes"%>
+        <%= link_to "List Recipes",recipes_path,class: "btn btn-danger list-reipes" %>
+        <%= link_to "New Recipes",new_recipe_url,class: "btn btn-danger list-reipes" %>
     </div>
+
 
     <!-- Collect the nav links, forms, and other content for toggling -->
 
-
       <ul class="nav navbar-nav navbar-right">
+      
       <form class="navbar-form navbar-left">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
-        <%= link_to "List Recipes",recipes_path,class: "btn btn-danger list-reipes" %>
-        <%= link_to "New Recipes",new_recipe_url,class: "btn btn-danger list-reipes" %>
+      
+      
+    
       </ul>
+      
+      <ul class="nav navbar-nav navbar-right">
+        <% if logged_in? %>
+               <small>Hello <%= current_chef.chefname.capitalize %></small>
+              <%= link_to "View your profile", chef_path(current_chef) ,class: "btn btn-danger list-reipes"%>
+              <%= link_to "Edit your profile", edit_chef_path(current_chef),class: "btn btn-danger list-reipes" %>
+              <%= link_to "Log out", logout_path,  method: :delete ,class: "btn btn-danger list-reipes"%>
+           
+        <% else %>
+          <%= link_to "Log in", login_path ,class: "btn btn-danger list-reipes"%> 
+        <% end %>
+      </ul>
+      
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
