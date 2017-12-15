@@ -10,11 +10,8 @@
       <p><%= truncate(recipe.description, length: 150) %></p>
       <p>
         <span class="quiet"><small>Created 
-        <%= "7 days ago" %> </small></span>
+        <%=  time_ago_in_words(recipe.created_at) %> ago</small></span>
       </p> 
     </div>
-    
-  
-    
   </div>
 <% end %>
