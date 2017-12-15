@@ -16,10 +16,8 @@
     <p class="center"><%= link_to gravatar_for(@recipe.chef) ,recipes_path() %></p>
     <p class="center">
       <small><%= @recipe.chef.chefname.capitalize %></small>
-     <div class="pull-right"><%= created time_ago_in_words(recipe.created_at) ago %></div>   
+     <div class="pull-right"><%=  time_ago_in_words(@recipe.created_at)  %>ago</div>   
     </p>
-     
-  
 </div>
 <div class="recipe-actions">
   <% if logged_in? && current_chef ==@recipe.chef%>

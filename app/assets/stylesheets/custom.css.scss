@@ -1,7 +1,19 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-
+.del{
+    
+    text-align: center;
+    width: 1150px;
+    font-size: 1.2em;
+    text-decoration: none;
+    background-color: #333 ;
+    
+}
+.del:hover
+{
+    background-color: #333 ;
+}
 .listing {
   list-style: none;
   padding-left: 0;

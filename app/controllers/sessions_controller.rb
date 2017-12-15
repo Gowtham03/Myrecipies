@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
   # will simply render the form
   end
 
- def create
+def create
     chef = Chef.find_by(email: params[:session][:email].downcase)
     if chef && chef.authenticate(params[:session][:password])
       session[:chef_id] = chef.id
@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
     flash.now[:danger] = "There was something wrong with your login information"
       render 'new'
     end
-  end
+end
   
   def destroy
     session[:chef_id] = nil
