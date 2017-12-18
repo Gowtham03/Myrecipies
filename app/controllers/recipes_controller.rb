@@ -1,8 +1,8 @@
 class RecipesController < ApplicationController
     def index
-        #@chef_recipes = Recipe.paginate(page: params[:page], per_page: 5)   
-        @recipes =Recipe.all
-        end
+        @recipes = Recipe.paginate(page: params[:page], per_page: 2)   
+        #@recipes =Recipe.all
+    end
     def show
         @recipe = Recipe.find(params[:id])
     end
@@ -18,7 +18,7 @@ class RecipesController < ApplicationController
     else
       render 'new'
     end
-  end
+    end
 
     
     def edit
